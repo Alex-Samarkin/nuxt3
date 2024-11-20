@@ -1,7 +1,7 @@
 <template>
   <v-app :theme="theme">
     <!-- Navigation Bar -->
-    <v-app-bar app color="primary">
+    <v-app-bar app color="primary-darken-2" dark>
       <v-app-bar-title>ИНТЦ ЮНИТИ ПАРК</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn to="/" text>Главная</v-btn>
@@ -20,10 +20,10 @@
     </v-main>
 
     <!-- Footer -->
-    <v-footer app color="primary" class="text-center">
+    <v-footer app color="primary-darken-2" dark class="text-center">
       <v-row justify="center" no-gutters>
         <v-col class="text-center">
-          <span>&copy; {{ new Date().getFullYear() }} - My Nuxt App</span>
+          <span>&copy; {{ new Date().getFullYear() }} - ИНТЦ ЮНИТИ ПАРК</span>
         </v-col>
       </v-row>
     </v-footer>
