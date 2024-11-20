@@ -11,7 +11,7 @@
   defineProps({
     color: {
       type: String,
-      default: 'grey'
+      default: 'secondary'
     },
     thickness: {
       type: Number,

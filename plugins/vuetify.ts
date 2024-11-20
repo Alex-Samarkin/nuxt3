@@ -23,6 +23,7 @@ export default defineNuxtPlugin((app) => {
             warning: '#FFC107',
             background: '#F5F5F5',
             surface: '#FFFFFF',
+            darken: '#424242',
           }
         },
         customDark: {
@@ -37,6 +38,7 @@ export default defineNuxtPlugin((app) => {
             warning: '#FFA000',
             background: '#121212',
             surface: '#1E1E1E',
+            darken: '#424242',
           }
         }
       }
