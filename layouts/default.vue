@@ -1,14 +1,17 @@
 <template>
-  <v-app>
+  <v-app :theme="theme">
     <!-- Navigation Bar -->
     <v-app-bar app color="primary">
-      <v-app-bar-title>My Nuxt App</v-app-bar-title>
+      <v-app-bar-title>ИНТЦ ЮНИТИ ПАРК</v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/" text>Home</v-btn>
-      <v-btn to="/about" text>About</v-btn>
+      <v-btn to="/" text>Главная</v-btn>
+      <v-btn to="/about" text>Об ИНТЦ</v-btn>
+      <v-btn @click="toggleTheme" icon class="ml-4">
+        <v-icon>{{ theme === 'customTheme' ? 'mdi-weather-night' : 'mdi-weather-sunny' }}</v-icon>
+      </v-btn>
     </v-app-bar>
 
-    <!-- Header -->
+    <!-- Main Content -->
     <v-main>
       <v-container>
         <!-- Page Content -->
@@ -28,5 +31,17 @@
 </template>
 
 <script setup>
-// Any layout-specific logic can go here
+import { ref } from 'vue'
+
+const theme = ref('customTheme')
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'customTheme' ? 'customDark' : 'customTheme'
+}
 </script>
+
+<style scoped>
+.v-btn {
+  text-transform: none;
+}
+</style>
