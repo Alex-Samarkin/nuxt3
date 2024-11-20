@@ -6,7 +6,10 @@
       <v-spacer></v-spacer>
       <v-btn to="/" text>Главная</v-btn>
       <v-btn to="/about" text>Об ИНТЦ</v-btn>
+      <v-btn to="/projects" text>Резиденты</v-btn>
+      <v-btn to="/news" text>Новости</v-btn>
       <v-btn to="/documents" text>Документы</v-btn>
+      <v-btn to="/contact" text>Связь</v-btn>
       <v-btn @click="toggleTheme" icon class="ml-4">
         <v-icon>{{ theme === 'customTheme' ? 'mdi-weather-night' : 'mdi-weather-sunny' }}</v-icon>
       </v-btn>

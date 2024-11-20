@@ -12,8 +12,10 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "nuxt": "^3.14.1592",
+    "papaparse": "^5.4.1",
     "vue": "latest",
     "vue-router": "latest",
-    "vuetify": "^3.7.4"
+    "vuetify": "^3.7.4",
+    "xlsx": "^0.18.5"
   }
 }

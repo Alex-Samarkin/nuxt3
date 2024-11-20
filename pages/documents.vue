@@ -31,6 +31,7 @@
       </v-col>
     </v-row>
 
+    <hrule />
   </v-container>
 </template>
 
