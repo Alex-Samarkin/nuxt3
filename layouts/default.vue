@@ -24,7 +24,7 @@
     </v-main>
 
     <!-- Footer -->
-    <v-footer app color="primary" class="footer-container">
+    <v-footer app color="primary" class="footer-container-hover">
       <v-container class="py-0">
         <v-divider color="secondary" class="mb-4" />
         <v-row>

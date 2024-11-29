@@ -7,32 +7,14 @@
         <v-card class="mb-4">
           <v-card-title>Фильтры</v-card-title>
           <v-card-text>
-            <v-text-field
-              v-model="searchQuery"
-              label="Поиск"
-              prepend-inner-icon="mdi-magnify"
-              variant="outlined"
-              density="comfortable"
-              class="mb-4"
-            ></v-text-field>
+            <v-text-field v-model="searchQuery" label="Поиск" prepend-inner-icon="mdi-magnify" variant="outlined"
+              density="comfortable" class="mb-4"></v-text-field>
 
-            <v-select
-              v-model="selectedTheme"
-              :items="themes"
-              label="Тема"
-              variant="outlined"
-              density="comfortable"
-              clearable
-              class="mb-4"
-            ></v-select>
+            <v-select v-model="selectedTheme" :items="themes" label="Тема" variant="outlined" density="comfortable"
+              clearable class="mb-4"></v-select>
 
-            <v-select
-              v-model="sortBy"
-              :items="sortOptions"
-              label="Сортировка"
-              variant="outlined"
-              density="comfortable"
-            ></v-select>
+            <v-select v-model="sortBy" :items="sortOptions" label="Сортировка" variant="outlined"
+              density="comfortable"></v-select>
           </v-card-text>
         </v-card>
       </v-col>
@@ -41,7 +23,7 @@
         <div v-if="loading" class="d-flex justify-center align-center" style="height: 200px">
           <v-progress-circular indeterminate color="primary"></v-progress-circular>
         </div>
-        
+
         <template v-else>
           <div v-if="filteredNews.length === 0" class="text-center pa-4">
             <v-icon size="64" color="grey">mdi-newspaper-variant-outline</v-icon>
@@ -49,12 +31,26 @@
             <div class="text-subtitle-1">Попробуйте изменить параметры поиска</div>
           </div>
 
-          <news-card
-            v-for="news in filteredNews"
-            :key="news.id"
-            v-bind="news"
-          ></news-card>
+          <news-card v-for="news in filteredNews" :key="news.id" v-bind="news"></news-card>
         </template>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
+        <TriColumnText :columns="[
+          {
+            title: 'Your First Title',
+            text: 'Your first column text'
+          },
+          {
+            title: 'Your Second Title',
+            text: 'Your second column text'
+          },
+          {
+            title: 'Your Third Title',
+            text: 'Your third column text'
+          }
+        ]" />
       </v-col>
     </v-row>
   </v-container>
@@ -112,7 +108,7 @@ onMounted(async () => {
   try {
     const response = await fetch('/data/news.csv')
     const csvText = await response.text()
-    
+
     const result = Papa.parse(csvText, {
       header: true,
       skipEmptyLines: true
